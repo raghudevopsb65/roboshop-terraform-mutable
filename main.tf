@@ -35,7 +35,7 @@ module "DOCDB" {
   PG_FAMILY          = var.DOCDB_PG_FAMILY
   PRIVATE_SUBNET_IDS = module.VPC.PRIVATE_SUBNET_IDS
   VPC_ID             = module.VPC.VPC_ID
-  RDS_PORT           = var.DOCDB_PORT
+  DOCDB_RDS_PORT     = var.DOCDB_PORT
   ALLOW_SG_CIDR      = module.VPC.PRIVATE_SUBNET_CIDR
 }
 
