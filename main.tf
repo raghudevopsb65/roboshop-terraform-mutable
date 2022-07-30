@@ -22,6 +22,6 @@ module "RDS" {
   PRIVATE_SUBNET_IDS = module.VPC.PRIVATE_SUBNET_IDS
   VPC_ID             = module.VPC.VPC_ID
   RDS_PORT           = var.RDS_PORT
-  ALLOW_SG_CIDR      = module.VPC.PRIVATE_SUBNET_IDS
+  ALLOW_SG_CIDR      = module.VPC.PRIVATE_SUBNET_CIDR
 }
 
