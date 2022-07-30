@@ -18,7 +18,7 @@ module "RDS" {
   ENGINE             = var.RDS_ENGINE
   ENGINE_VERSION     = var.RDS_ENGINE_VERSION
   RDS_INSTANCE_CLASS = var.RDS_INSTANCE_CLASS
-  PG_FAMILY          = var.PG_FAMILY
+  PG_FAMILY          = var.RDS_PG_FAMILY
   PRIVATE_SUBNET_IDS = module.VPC.PRIVATE_SUBNET_IDS
   VPC_ID             = module.VPC.VPC_ID
   RDS_PORT           = var.RDS_PORT
