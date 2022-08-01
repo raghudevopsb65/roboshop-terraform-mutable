@@ -77,4 +77,14 @@ module "LB" {
   PUBLIC_SUBNET_IDS  = module.VPC.PUBLIC_SUBNET_IDS
 }
 
+module "FRONTEND" {
+  source             = "github.com/raghudevopsb65/tf-module-mutable-app"
+  ENV                = var.ENV
+  PROJECT            = var.PROJECT
+  PRIVATE_SUBNET_IDS = module.VPC.PRIVATE_SUBNET_IDS
+  VPC_ID             = module.VPC.VPC_ID
+  ALLOW_SG_CIDR      = module.VPC.PRIVATE_SUBNET_CIDR
+  PORT               = 80
+  COMPONENT          = "frontend"
+}
 
