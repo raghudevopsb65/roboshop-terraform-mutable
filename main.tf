@@ -86,5 +86,6 @@ module "FRONTEND" {
   ALLOW_SG_CIDR      = module.VPC.PRIVATE_SUBNET_CIDR
   PORT               = 80
   COMPONENT          = "frontend"
+  INSTANCE_TYPE      = "t3.micro"
 }
 
