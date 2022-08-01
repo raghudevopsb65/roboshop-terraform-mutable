@@ -55,5 +55,15 @@ module "ELASTICACHE" {
   NUMBER_OF_NODES    = var.ELASTICACHE_NUMBER_OF_NODES
 }
 
+module "RABBITMQ" {
+  source             = "github.com/raghudevopsb65/tf-module-rabbitmq"
+  ENV                = var.ENV
+  PROJECT            = var.PROJECT
+  PRIVATE_SUBNET_IDS = module.VPC.PRIVATE_SUBNET_IDS
+  VPC_ID             = module.VPC.VPC_ID
+  PORT               = var.RABBITMQ_PORT
+  ALLOW_SG_CIDR      = module.VPC.PRIVATE_SUBNET_CIDR
+  INSTANCE_TYPE      = var.RABBITMQ_INSTANCE_TYPE
+}
 
 
