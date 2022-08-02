@@ -10,6 +10,8 @@ variable "AZ" {}
 variable "DEFAULT_VPC_ID" {}
 variable "DEFAULT_VPC_CIDR" {}
 variable "DEFAULT_VPC_RT" {}
+variable "PRIVATE_ZONE_ID" {}
+variable "PUBLIC_ZONE_ID" {}
 
 
 // RDS
@@ -40,3 +42,4 @@ variable "RABBITMQ_PORT" {}
 variable "RABBITMQ_INSTANCE_TYPE" {}
 
 variable "INSTANCE_COUNT" {}
+
