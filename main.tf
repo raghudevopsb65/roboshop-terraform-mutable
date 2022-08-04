@@ -197,3 +197,6 @@ module "PAYMENT" {
   PRIVATE_LISTENER_ARN = module.LB.PRIVATE_LISTENER_ARN
 }
 
+output "REDIS" {
+  value = module.ELASTICACHE.REDIS_ENDPOINT
+}
