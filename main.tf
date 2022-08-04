@@ -24,7 +24,7 @@ module "RDS" {
   PRIVATE_SUBNET_IDS = module.VPC.PRIVATE_SUBNET_IDS
   VPC_ID             = module.VPC.VPC_ID
   RDS_PORT           = var.RDS_PORT
-  ALLOW_SG_CIDR      = module.VPC.PRIVATE_SUBNET_CIDR
+  ALLOW_SG_CIDR      = concat(module.VPC.PRIVATE_SUBNET_CIDR, tolist([var.WORKSTATION_IP]))
 }
 
 module "DOCDB" {
@@ -177,6 +177,7 @@ module "SHIPPING" {
   PRIVATE_LB_DNS       = module.LB.PRIVATE_LB_DNS
   PRIVATE_ZONE_ID      = var.PRIVATE_ZONE_ID
   PRIVATE_LISTENER_ARN = module.LB.PRIVATE_LISTENER_ARN
+  MYSQL_ENDPOINT       = module.RDS.MYSQL_ENDPOINT
 }
 
 module "PAYMENT" {
