@@ -83,6 +83,7 @@ module "LB" {
 }
 
 module "FRONTEND" {
+  depends_on           = [module.CART, module.CATALOGUE, module.PAYMENT, module.SHIPPING, module.USER]
   source               = "github.com/raghudevopsb65/tf-module-mutable-app"
   ENV                  = var.ENV
   PROJECT              = var.PROJECT
