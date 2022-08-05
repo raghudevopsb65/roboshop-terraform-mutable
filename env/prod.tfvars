@@ -45,23 +45,23 @@ INSTANCE_COUNT = {
   FRONTEND = {
     COUNT         = 2
     INSTANCE_TYPE = "t3.micro"
-  },
+  }
   USER = {
     COUNT         = 2
     INSTANCE_TYPE = "t3.micro"
-  },
+  }
   CATALOGUE = {
     COUNT         = 2
     INSTANCE_TYPE = "t3.micro"
-  },
+  }
   CART = {
     COUNT         = 2
     INSTANCE_TYPE = "t3.micro"
-  },
+  }
   SHIPPING = {
     COUNT         = 2
     INSTANCE_TYPE = "t3.micro"
-  },
+  }
   PAYMENT = {
     COUNT         = 2
     INSTANCE_TYPE = "t3.micro"
